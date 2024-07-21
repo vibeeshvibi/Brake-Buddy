@@ -38,7 +38,7 @@ const Navbar = () => {
         <span className="ml-1 text-black text-2xl">Buddy</span>
       </div>
       <div className="block lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-        <button className="flex items-center px-2 py-2 border rounded text-gray-600 border-gray-400 hover:text-gray-800 hover:border-gray-800">
+        <button className="flex items-center px-2 ml-24 py-2 border rounded text-gray-600 border-gray-400 hover:text-gray-800 hover:border-gray-800">
           {menuOpen ? <HiOutlineX size={24} /> : <HiOutlineMenu size={24} />}
         </button>
       </div>
