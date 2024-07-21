@@ -59,32 +59,32 @@ const Signup = () => {
   };
 
   return (
-    <div className="mt-3 flex h-screen bg-white">
-      <div className="w-1/2 flex flex-col justify-center items-center">
-        <form className="bg-white p-10 rounded shadow-2xl w-96" onSubmit={handleSubmit}>
+    <div className="flex flex-col lg:flex-row h-screen bg-white">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-10">
+        <form className="bg-white p-10 rounded-lg shadow-2xl w-full max-w-md" onSubmit={handleSubmit}>
           <h2 className="text-3xl font-bold mb-6 text-center">Sign up</h2>
           <input
             type="text"
             placeholder="Email"
-            className="mb-4 p-4 w-full border rounded-lg"
+            className="mb-4 p-4 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="tel"
             placeholder="Phone"
-            className="mb-4 p-4 w-full border rounded-lg"
+            className="mb-4 p-4 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={(e) => setPhone(e.target.value)}
           />
           <input
             type="password"
             placeholder="Password"
-            className="mb-4 p-4 w-full border rounded-lg"
+            className="mb-4 p-4 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={(e) => setPass(e.target.value)}
           />
           <input
             type="password"
             placeholder="Confirm Password"
-            className="mb-4 p-4 w-full border rounded-lg"
+            className="mb-4 p-4 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={(e) => setCPass(e.target.value)}
           />
           <button
@@ -98,15 +98,15 @@ const Signup = () => {
             Already have an account?{' '}
             <span
               onClick={() => { navigate('/login'); }}
-              className="text-blue-700 cursor-pointer"
+              className="text-blue-700 cursor-pointer hover:underline"
             >
               Sign in
             </span>
           </p>
         </form>
       </div>
-      <div className="w-1/2 flex items-center justify-center">
-        <img src={img} alt="Bike" className="max-w-full h-auto" />
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-0">
+        <img src={img} alt="Bike" className="w-full h-auto lg:max-h-full lg:mr-10" />
       </div>
       <ToastContainer
         position='bottom-center' 
