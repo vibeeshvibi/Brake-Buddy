@@ -1,0 +1,14 @@
+
+*{
+  padding: 0;
+  margin:0;
+}
+
+.App_main_pagecontent{
+  height: calc(100%-80px);
+}
+
+body{
+  background-color: var(--background-color);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
