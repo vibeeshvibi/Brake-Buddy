@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Book from '../../Assets/application.jpg';
 import { useNavigate } from "react-router-dom";
-import { TextField, Select, MenuItem } from '@mui/material';
+import { Select, MenuItem } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from '../Auth';
@@ -132,49 +132,48 @@ function Booking() {
                     <input
                         type="date"
                         id="date"
-                        className="border p-2 rounded mb-4 w-full"
+                        className="border-2 h-12 p-4 rounded mb-4 w-full"
                         min={sdate}
                         max={edate}
                         onChange={(e) => setDate(e.target.value)}
                     />
 
                     <label htmlFor="name" className="block mb-2">Owner Name</label>
-                    <TextField
+                    <input
                         id="name"
-                        className="mb-4 w-full"
+                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
                         placeholder='Enter Your Name'
                         onChange={(e) => setOName(e.target.value)}
                     />
 
                     <label htmlFor="vname" className="block mb-2">Vehicle Name</label>
-                    <TextField
+                    <input
                         id="vname"
-                        placeholder='Enter Your Brand Name'
-                        className="mb-4 w-full"
+                        placeholder='Enter Your Vehicle Name'
+                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
                         onChange={(e) => setVName(e.target.value)}
                     />
 
                     <label htmlFor="vno" className="block mb-2">Registration Number (TN56S2428)</label>
-                    <TextField
+                    <input
                         id="vno"
-                        className="mb-4 w-full"
+                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
                         placeholder='Enter Your Reg No'
                         onChange={(e) => setVNo(e.target.value)}
                     />
 
-                    <label htmlFor="vmodel" className="block mb-2">Vehicle Model Year</label>
-                    <TextField
+                    <label htmlFor="vmodel" className="block mb-2">Vehicle Year</label>
+                    <input
                         id="vmodel"
                         placeholder='Enter Your Vehicle Manufacture Year'
-                        className="mb-4 w-full"
+                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
                         onChange={(e) => setVModel(e.target.value)}
                     />
 
                     <label htmlFor="addr" className="block mb-2">Address</label>
-                    <TextField
+                    <input
                         id="addr"
-                        className="mb-4 w-full"
-                        placeholder='Enter Your Address'
+                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
                         onChange={(e) => setVAddress(e.target.value)}
                     />
 
@@ -184,7 +183,7 @@ function Booking() {
                         multiple
                         value={service}
                         onChange={handleChange}
-                        className="w-full"
+                        className="w-full h-12"
                     >
                         {data.map((item) => (
                             <MenuItem key={item.sname} value={item.sname}>
