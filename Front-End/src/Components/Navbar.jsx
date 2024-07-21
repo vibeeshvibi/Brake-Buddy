@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-white p-4 shadow-md sticky top-0 w-full  ">
-      <div className="flex items-center flex-shrink-0 text-red-500 mr-6 cursor-pointer" onClick={Home}>
+      <div className="flex items-center flex-shrink-0 text-red-700 mr-6 cursor-pointer" onClick={Home}>
         <span className="font-bold text-3xl tracking-tight">Brake</span>
         <span className="ml-1 text-black text-2xl">Buddy</span>
       </div>
