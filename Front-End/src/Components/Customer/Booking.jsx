@@ -16,17 +16,14 @@ function Booking() {
     const [date, setDate] = useState("");
     const [service, setService] = useState([]);
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false); // New loading state
+    const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
 
-    // Get current date
     const currDate = new Date();
     const currYear = currDate.getFullYear();
     const currMonth = (currDate.getMonth() + 1).toString().padStart(2, '0');
     const currDay = currDate.getDate().toString().padStart(2, '0');
-
-    // Format the current date and end date (one year ahead)
     const sdate = `${currYear}-${currMonth}-${currDay}`;
     const edate = `${currYear + 1}-${currMonth}-${currDay}`;
 
@@ -37,7 +34,8 @@ function Booking() {
     useEffect(() => {
         try {
             fetch("https://service-app-1.onrender.com/service", {
-                method: "POST", crossDomain: true,
+                method: "POST",
+                crossDomain: true,
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(),
             })
@@ -57,7 +55,7 @@ function Booking() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true); // Set loading to true when the request starts
+        setLoading(true);
 
         const email = sessionStorage.getItem("Email");
         const phone = sessionStorage.getItem("Phone");
@@ -70,12 +68,13 @@ function Booking() {
                                 if (service.length > 0) {
                                     try {
                                         const res = await fetch("https://service-app-1.onrender.com/addbooking", {
-                                            method: "POST", crossDomain: true,
+                                            method: "POST",
+                                            crossDomain: true,
                                             headers: { "Content-Type": "application/json" },
                                             body: JSON.stringify({ date, name, email, phone, vname, vno, vmodel, address, service }),
                                         });
 
-                                        setLoading(false); // Set loading to false when the request finishes
+                                        setLoading(false);
 
                                         if (res.status === 200) {
                                             toast.success("Added Successfully");
@@ -86,7 +85,7 @@ function Booking() {
                                             toast.error("Unknown Error Occured!");
                                         }
                                     } catch (error) {
-                                        setLoading(false); // Set loading to false in case of error
+                                        setLoading(false);
                                         console.log(error);
                                     }
                                 } else {
@@ -124,10 +123,10 @@ function Booking() {
     };
 
     return (
-        <div className="flex">
-            <div className="w-1/2 p-8 mx-10">
-                <form className="container max-w-md">
-                    <h1 className="text-5xl font-bold mb-4">Book a Service</h1>
+        <div className="flex flex-col lg:flex-row h-screen bg-white">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center p-8">
+                <form className="container max-w-md mx-auto">
+                    <h1 className="text-4xl lg:text-5xl font-bold mb-4">Book a Service</h1>
                     <label htmlFor="date" className="block mb-2">Date</label>
                     <input
                         type="date"
@@ -137,46 +136,40 @@ function Booking() {
                         max={edate}
                         onChange={(e) => setDate(e.target.value)}
                     />
-
                     <label htmlFor="name" className="block mb-2">Owner Name</label>
                     <input
                         id="name"
-                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
+                        className="mb-4 w-full h-12 p-4 border-2 rounded-md"
                         placeholder='Enter Your Name'
                         onChange={(e) => setOName(e.target.value)}
                     />
-
                     <label htmlFor="vname" className="block mb-2">Vehicle Name</label>
                     <input
                         id="vname"
                         placeholder='Enter Your Vehicle Name'
-                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
+                        className="mb-4 w-full h-12 p-4 border-2 rounded-md"
                         onChange={(e) => setVName(e.target.value)}
                     />
-
                     <label htmlFor="vno" className="block mb-2">Registration Number (TN56S2428)</label>
                     <input
                         id="vno"
-                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
+                        className="mb-4 w-full h-12 p-4 border-2 rounded-md"
                         placeholder='Enter Your Reg No'
                         onChange={(e) => setVNo(e.target.value)}
                     />
-
                     <label htmlFor="vmodel" className="block mb-2">Vehicle Year</label>
                     <input
                         id="vmodel"
                         placeholder='Enter Your Vehicle Manufacture Year'
-                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
+                        className="mb-4 w-full h-12 p-4 border-2 rounded-md"
                         onChange={(e) => setVModel(e.target.value)}
                     />
-
                     <label htmlFor="addr" className="block mb-2">Address</label>
                     <input
                         id="addr"
-                        className="mb-4 w-full  h-12 p-4 border-2 rounded-md "
+                        className="mb-4 w-full h-12 p-4 border-2 rounded-md"
                         onChange={(e) => setVAddress(e.target.value)}
                     />
-
                     <label htmlFor="service" className="block mb-2">Pick a Service</label>
                     <Select
                         id="service"
@@ -191,7 +184,6 @@ function Booking() {
                             </MenuItem>
                         ))}
                     </Select>
-
                     <div className="mt-8 space-x-4">
                         <button
                             variant="contained"
@@ -201,7 +193,6 @@ function Booking() {
                         >
                             {loading ? 'Booking...' : 'Book'}
                         </button>
-
                         <button
                             variant="contained"
                             onClick={handleCancel}
@@ -212,9 +203,8 @@ function Booking() {
                     </div>
                 </form>
             </div>
-
-            <div className=" flex justify-center items-center">
-                <img src={Book} alt="book" className="max-h-full" />
+            <div className="w-full lg:w-1/2 flex justify-center items-center p-4 lg:p-0">
+                <img src={Book} alt="book" className="max-w-full h-auto lg:max-h-full" />
             </div>
             <ToastContainer
                 position='bottom-center'
