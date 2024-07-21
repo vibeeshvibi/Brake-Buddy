@@ -60,8 +60,8 @@ const Login = () => {
   };
 
   return (
-    <div className="mt-5 flex h-screen bg-white">
-      <div className="w-1/2 flex flex-col justify-center items-center p-10">
+    <div className="flex flex-col lg:flex-row h-screen bg-white">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-10">
         <form className="bg-white p-10 rounded-lg shadow-2xl w-full max-w-md" onSubmit={handleSubmit}>
           <h2 className="text-3xl font-bold mb-6 text-center">Log in</h2>
           <input
@@ -100,8 +100,8 @@ const Login = () => {
           </p>
         </form>
       </div>
-      <div className="w-1/2 flex items-center justify-center">
-        <img src={img} alt="Bike" className="max-w-full h-auto mr-10" />
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-0">
+        <img src={img} alt="Bike" className="w-full h-auto lg:max-h-full lg:mr-10" />
       </div>
       <ToastContainer
         position='bottom-center' 
