@@ -64,9 +64,9 @@ function ViewBooking() {
         <div className="flex flex-col items-center mt-10">
             <h1 className="text-4xl font-bold mb-8 text-gray-800">Booking Details</h1>
             {!loading ? (
-                <div className="flex w-full max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden">
-                    <form className="w-2/3 p-8">
-                        <div className="grid grid-cols-3 gap-6">
+                <div className="flex flex-col md:flex-row w-full max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden">
+                    <form className="md:w-2/3 w-full p-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="mb-4">
                                 <label htmlFor="date" className="block text-gray-600 font-semibold mb-2">Date</label>
                                 <input
@@ -147,7 +147,7 @@ function ViewBooking() {
                                     readOnly
                                 />
                             </div>
-                            <div className="mb-4 col-span-2">
+                            <div className="mb-4 md:col-span-2">
                                 <label htmlFor="service" className="block text-gray-600 font-semibold mb-2">Service</label>
                                 <textarea
                                     id="service"
@@ -156,7 +156,7 @@ function ViewBooking() {
                                     readOnly
                                 />
                             </div>
-                            <div className="mb-4 col-span-2">
+                            <div className="mb-4 md:col-span-2">
                                 <label htmlFor="status" className="block text-gray-600 font-semibold mb-2">Status</label>
                                 <input
                                     type="text"
@@ -185,8 +185,8 @@ function ViewBooking() {
                             </button>
                         </div>
                     </form>
-                    <div className="w-1/2 flex justify-center items-center p-8">
-                        <img src={Book} alt="book" className="max-h-full " />
+                    <div className="md:w-1/2 w-full flex justify-center items-center p-8">
+                        <img src={Book} alt="book" className="max-h-full w-full object-contain" />
                     </div>
                 </div>
             ) : (
