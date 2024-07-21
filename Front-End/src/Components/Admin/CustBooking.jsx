@@ -44,7 +44,7 @@ function CustBooking() {
     return (
         <div className="min-h-screen p-8 ">
             <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Status Checking</h1>
-            <div className="flex justify-between mb-6">
+            <div className="flex justify-between gap-2 mb-6">
                 <button
                     className="bg-blue-500 w-28 text-white py-2 px-4 rounded shadow hover:bg-blue-600"
                     onClick={() => setStatus(null)}
@@ -76,7 +76,7 @@ function CustBooking() {
             </div>
             {!loading ?
                 <div className="overflow-x-auto">
-                    <div className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                    <div className="min-w-full bg-white shadow-md rounded-lg overflow-wrap">
                         <table className="min-w-full bg-white">
                             <thead className="bg-gray-300">
                                 <tr>
