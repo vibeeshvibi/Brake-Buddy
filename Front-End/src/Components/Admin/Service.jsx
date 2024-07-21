@@ -86,7 +86,7 @@ function Service() {
   return (
     <div className="min-h-screen p-8">
       <h1 className="text-5xl font-bold text-center text-gray-800">List of Services</h1>
-      <div className="flex justify-start mb-6">
+      <div className="flex justify-start mt-5 mb-6">
         <button className="bg-blue-500 text-white py-2 px-4 rounded shadow hover:bg-blue-600">
           <Link to="../addservice" onClick={AddServ} className="text-white no-underline">
             Add New Service
