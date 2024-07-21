@@ -15,7 +15,7 @@ function Home() {
     <div className="min-h-screen flex flex-col md:flex-row p-8">
       <div className="AdminHomeDetails flex-1 md:mr-8 flex justify-center items-center md:items-start">
         <div className="container mx-auto text-center md:text-left px-3">
-          <h1 className="text-4xl md:text-8xl font-bold mb-4 pt-20">Welcome Admin</h1>
+          <h1 className="text-4xl md:text-8xl font-bold mb-4 pt-14">Welcome Admin</h1>
           <h3 className="text-2xl md:text-4xl pt-5 text-red-700 font-bold mb-4">Here are the Bookings!</h3>
           <div className='pt-5'>
             <button
