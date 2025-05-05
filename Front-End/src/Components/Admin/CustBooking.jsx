@@ -15,7 +15,7 @@ function CustBooking() {
         setButtonLoading(true);
         setLoading(true);
         try {
-            fetch("https://service-app-1.onrender.com/custbooking", {
+            fetch("https://brake-buddy-2.onrender.com/custbooking", {
                 method: "POST",
                 crossDomain: true,
                 headers: { "Content-Type": "application/json" },

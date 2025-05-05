@@ -8,7 +8,7 @@ function History() {
   useEffect(() => {
     const email = sessionStorage.getItem("Email");
     try {
-      fetch("https://service-app-1.onrender.com/history", {
+      fetch("https://brake-buddy-2.onrender.com/history", {
         method: "POST",
         crossDomain: true,
         headers: { "Content-Type": "application/json" },

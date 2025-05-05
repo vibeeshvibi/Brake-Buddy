@@ -25,7 +25,7 @@ function AddService() {
         if (samount && samount > 0 && alphanumeric.test(samount)) {
           setLoading(true); // Set loading to true
           try {
-            fetch("https://service-app-1.onrender.com/addservices", {
+            fetch("https://brake-buddy-2.onrender.com/addservices", {
               method: "POST",
               crossDomain: true,
               headers: { "Content-Type": "application/json" },

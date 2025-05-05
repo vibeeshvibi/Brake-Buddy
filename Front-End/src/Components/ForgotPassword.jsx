@@ -41,7 +41,7 @@ function ForgotPassword() {
             })
           ) {
             try {
-              fetch('https://service-app-1.onrender.com/forgotpasswordotp', {
+              fetch('https://brake-buddy-2.onrender.com/forgotpasswordotp', {
                 method: 'POST',
                 crossDomain: true,
                 headers: { 'Content-Type': 'application/json' },
@@ -81,7 +81,7 @@ function ForgotPassword() {
   const handleOTPVerification = () => {
     if (uOTP === otp) {
       try {
-        fetch('https://service-app-1.onrender.com/forgotpasswordupdate', {
+        fetch('https://brake-buddy-2.onrender.com/forgotpasswordupdate', {
           method: 'POST',
           crossDomain: true,
           headers: { 'Content-Type': 'application/json' },

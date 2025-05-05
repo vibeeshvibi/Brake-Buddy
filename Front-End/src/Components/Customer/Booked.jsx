@@ -12,7 +12,7 @@ function Booked() {
   useEffect(() => {
     const email = sessionStorage.getItem('Email');
     try {
-      fetch('https://service-app-1.onrender.com/fetchbook', {
+      fetch('https://brake-buddy-2.onrender.com/fetchbook', {
         method: 'POST',
         crossDomain: true,
         headers: { 'Content-Type': 'application/json' },

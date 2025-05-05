@@ -33,7 +33,7 @@ function Booking() {
 
     useEffect(() => {
         try {
-            fetch("https://service-app-1.onrender.com/service", {
+            fetch("https://brake-buddy-2.onrender.com/service", {
                 method: "POST",
                 crossDomain: true,
                 headers: { "Content-Type": "application/json" },
@@ -67,7 +67,7 @@ function Booking() {
                             if (address !== "") {
                                 if (service.length > 0) {
                                     try {
-                                        const res = await fetch("https://service-app-1.onrender.com/addbooking", {
+                                        const res = await fetch("https://brake-buddy-2.onrender.com/addbooking", {
                                             method: "POST",
                                             crossDomain: true,
                                             headers: { "Content-Type": "application/json" },

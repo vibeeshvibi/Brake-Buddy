@@ -7,7 +7,7 @@ function  useAuth() {
     useEffect(() => {
       async function AuthCheck() {
         try {
-          const response = await fetch("https://service-app-1.onrender.com/authcheck", {
+          const response = await fetch("https://brake-buddy-2.onrender.com/authcheck", {
             method: "POST",
             crossDomain: true,
             headers: {

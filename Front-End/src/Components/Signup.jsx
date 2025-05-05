@@ -24,7 +24,7 @@ const Signup = () => {
           })) {
             setLoading(true); // Set loading to true when the request starts
             try {
-              fetch("https://service-app-1.onrender.com/signup", {
+              fetch("https://brake-buddy-2.onrender.com/signup", {
                 method: "POST",
                 crossDomain: true,
                 headers: { "Content-Type": "application/json" },

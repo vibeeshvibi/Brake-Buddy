@@ -14,7 +14,7 @@ function ViewBooking() {
 
     useEffect(() => {
         try {
-            fetch("https://service-app-1.onrender.com/viewbooking", {
+            fetch("https://brake-buddy-2.onrender.com/viewbooking", {
                 method: "POST",
                 crossDomain: true,
                 headers: { "Content-Type": "application/json" },
@@ -37,7 +37,7 @@ function ViewBooking() {
     const handleCancel = () => {
         if (window.confirm("Are you sure you want to cancel this booking?")) {
             setCancelLoading(true);
-            fetch(`https://service-app-1.onrender.com/custdeletebooking/${_id}`, {
+            fetch(`https://brake-buddy-2.onrender.com/custdeletebooking/${_id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"

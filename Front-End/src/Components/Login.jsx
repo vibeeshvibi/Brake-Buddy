@@ -21,7 +21,7 @@ const Login = () => {
 
     setLoading(true); // Set loading to true when the request starts
     try {
-      fetch("https://service-app-1.onrender.com/login", {
+      fetch("https://brake-buddy-2.onrender.com/login", {
         method: "POST",
         crossDomain: true,
         headers: { "Content-Type": "application/json" },

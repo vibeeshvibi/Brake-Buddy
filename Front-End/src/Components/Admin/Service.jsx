@@ -19,7 +19,7 @@ function Service() {
 
   const fetchData = () => {
     try {
-      fetch("https://service-app-1.onrender.com/service", {
+      fetch("https://brake-buddy-2.onrender.com/service", {
         method: "POST",
         crossDomain: true,
         headers: { "Content-Type": "application/json" },
@@ -48,7 +48,7 @@ function Service() {
     console.log(`Deleting service with id: ${_id}`);
     setDeletingService(_id); // Set the currently deleting service ID
     try {
-      fetch("https://service-app-1.onrender.com/deleteservice", {
+      fetch("https://brake-buddy-2.onrender.com/deleteservice", {
         method: "POST",
         crossDomain: true,
         headers: { "Content-Type": "application/json" },

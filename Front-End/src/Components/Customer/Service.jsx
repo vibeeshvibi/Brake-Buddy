@@ -18,7 +18,7 @@ function Services() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://service-app-1.onrender.com/service", {
+        const response = await fetch("https://brake-buddy-2.onrender.com/service", {
           method: "POST",
           crossDomain: true,
           headers: { "Content-Type": "application/json" },

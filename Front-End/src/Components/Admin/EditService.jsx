@@ -16,7 +16,7 @@ function EditService() {
 
   useEffect(() => {
     try {
-      fetch("https://service-app-1.onrender.com/fetchservice", {
+      fetch("https://brake-buddy-2.onrender.com/fetchservice", {
         method: "POST",
         crossDomain: true,
         headers: { "Content-Type": "application/json" },
@@ -49,7 +49,7 @@ function EditService() {
       if (alphanumeric.test(data.samount)) {
         setLoading(true);
         try {
-          fetch("https://service-app-1.onrender.com/updateservice", {
+          fetch("https://brake-buddy-2.onrender.com/updateservice", {
             method: "POST",
             crossDomain: true,
             headers: { "Content-Type": "application/json" },

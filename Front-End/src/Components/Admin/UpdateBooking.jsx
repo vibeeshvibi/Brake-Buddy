@@ -20,7 +20,7 @@ function UpdateBooking() {
     useEffect(() => {
         if (_id) {
             try {
-                fetch("https://service-app-1.onrender.com/viewbooking", {
+                fetch("https://brake-buddy-2.onrender.com/viewbooking", {
                     method: "POST",
                     crossDomain: true,
                     headers: { "Content-Type": "application/json" },
@@ -49,7 +49,7 @@ function UpdateBooking() {
         } else {
             setUpdateLoading(true);
             try {
-                fetch("https://service-app-1.onrender.com/updatebooking", {
+                fetch("https://brake-buddy-2.onrender.com/updatebooking", {
                     method: "POST",
                     crossDomain: true,
                     headers: { "Content-Type": "application/json" },
@@ -76,7 +76,7 @@ function UpdateBooking() {
     const handleCancel = () => {
         if (window.confirm("Are you sure you want to delete this booking?")) {
             setDeleteLoading(true);
-            fetch(`https://service-app-1.onrender.com/custdeletebooking/${_id}`, {
+            fetch(`https://brake-buddy-2.onrender.com/custdeletebooking/${_id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
