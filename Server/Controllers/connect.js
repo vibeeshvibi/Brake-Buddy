@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-//Database Connection
 module.exports.connect = () => {
     mongoose.connect('mongodb+srv://brakebuddy8:245EbgKJ6Hooaorb@datacluster.4jsdrwg.mongodb.net/', {
 
